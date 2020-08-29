@@ -77,7 +77,8 @@ def main(args,encoder=None,decoder=None):
 				print("Loss: {:.4f}".format(loss.item()))
 				print("[INFO] Time elapsed: {}".format(time.time()-start))
 			
-			if (i+1) % args.save_step == 0:
+			#used `savedmodel` to save model once during epoch
+			if (i+1) % args.save_step == 0 and savedmodel is False:
 				torch.save(decoder.state_dict(),os.path.join(
 				args.model_path,'decoder-{}-{}.ckpt'.format(epoch+1,i+1)))
 				torch.save(encoder.state_dict(),os.path.join(
