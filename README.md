@@ -2,6 +2,7 @@
 PoC of OCR model based on Transformer architecture (Attention is all you need)
 
 References:
+
   nlp.seas.harvard.edu/2018/04/03/attention.html
   
   jalammar.github.io/illustrated-transformer/
